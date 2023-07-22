@@ -1,0 +1,12 @@
+---
+playbookRepos:
+  custom_k8s_objects:
+    branch: main
+    url: https://github.com/moraesjeremias/custom-k8s-objects-robusta-playbook.git
+customPlaybooks:
+- actions:
+  - format_kyverno_policy_reports: {}
+  triggers:
+  - on_schedule:
+      cron_schedule_repeat:
+        cron_expression: "*/2 * * * *"
